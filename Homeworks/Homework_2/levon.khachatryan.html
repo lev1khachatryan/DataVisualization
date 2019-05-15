@@ -707,31 +707,31 @@ img {max-width : 100%}
 
 <p>a) Plot the desirable position in each team. Where desirability is measured by the percentage of free throws made.</p>
 
-<div class="highlight"><pre><span></span><span class="n">teams_desirable_positions</span> <span class="o">=</span> <span class="n">women_nba</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Team&#39;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;FG%&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;FG%&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">teams_desirable_positions</span> <span class="o">=</span> <span class="n">women_nba</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Team&#39;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;FT%&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;FT%&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 <span class="n">teams_desirable_positions</span><span class="p">[</span><span class="s1">&#39;Position&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">teams_desirable_positions</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">teams_desirable_positions</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">teams_desirable_positions</span><span class="p">)</span>
 </pre></div>
 
 <div class="highlight"><pre>
-   Team    FG%  Position
-0   SAN  562.9         1
-1   CHI  544.6         2
-2   SEA  541.6         3
-3    NY  538.5         4
-4   PHO  524.9         5
-5   CON  508.4         6
-6   ATL  507.7         7
-7    LA  506.4         8
-8   MIN  488.9         9
-9   WAS  476.8        10
-10  DAL  467.2        11
-11  IND  467.0        12
+   Team     FT%  Position
+0   IND  1021.8         1
+1   PHO   983.7         2
+2   WAS   976.5         3
+3   CON   968.8         4
+4   SAN   898.1         5
+5   CHI   896.0         6
+6   MIN   895.7         7
+7   SEA   890.9         8
+8   DAL   879.6         9
+9    NY   828.5        10
+10   LA   828.4        11
+11  ATL   739.7        12
 </pre></div>
 
 
 
-<div class="highlight"><pre><span></span><span class="n">trace1</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">teams_desirable_positions</span><span class="p">[</span><span class="s1">&#39;Team&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">teams_desirable_positions</span><span class="p">[</span><span class="s1">&#39;FG%&#39;</span><span class="p">],</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Number of games per team&quot;</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><span class="n">trace1</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">teams_desirable_positions</span><span class="p">[</span><span class="s1">&#39;Team&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">teams_desirable_positions</span><span class="p">[</span><span class="s1">&#39;FT%&#39;</span><span class="p">],</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Desirable position&quot;</span><span class="p">,</span>
                      <span class="n">marker</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;rgba(152,0,0,0.5)&quot;</span><span class="p">)</span>
                     <span class="p">)</span>
 
@@ -1094,10 +1094,17 @@ Text(0,0.5,&#39;Price&#39;)
 
 
 
-<div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Choropleth</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><span class="n">mycolorscale</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">],</span>
+        <span class="p">[(</span><span class="nb">sum</span><span class="p">(</span><span class="n">worldbank_gdp</span><span class="p">[</span><span class="s2">&quot;gdp_percentage&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="n">worldbank_gdp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="s2">&quot;white&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">]</span>
+    <span class="p">]</span>
+    
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Choropleth</span><span class="p">(</span>
     <span class="n">locations</span> <span class="o">=</span> <span class="n">worldbank_gdp</span><span class="p">[</span><span class="s1">&#39;Country Code&#39;</span><span class="p">],</span>
     <span class="n">z</span> <span class="o">=</span> <span class="n">worldbank_gdp</span><span class="p">[</span><span class="s1">&#39;gdp_percentage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span>
     <span class="n">autocolorscale</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+    <span class="n">colorscale</span> <span class="o">=</span> <span class="n">mycolorscale</span><span class="p">,</span>
     <span class="n">marker</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">choropleth</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span>
         <span class="n">line</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">choropleth</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span>
             <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;rgb(180,180,180)&#39;</span><span class="p">,</span>

@@ -38,13 +38,13 @@ women_nba = pd.read_csv('hw2_women_nba.csv')
 ```
 a) Plot the desirable position in each team. Where desirability is measured by the percentage of free throws made.
 ```python
-teams_desirable_positions = women_nba.groupby('Team', as_index=False).agg({'FG%':'sum'}).sort_values(by='FG%', ascending=False)
+teams_desirable_positions = women_nba.groupby('Team', as_index=False).agg({'FT%':'sum'}).sort_values(by='FT%', ascending=False)
 teams_desirable_positions['Position'] = np.arange(1,len(teams_desirable_positions)+1)
 teams_desirable_positions.reset_index(inplace=True, drop=True)
 print(teams_desirable_positions)
 ```
 ```python,  fig = True
-trace1 = go.Bar(x = teams_desirable_positions['Team'], y=teams_desirable_positions['FG%'], name = "Number of games per team",
+trace1 = go.Bar(x = teams_desirable_positions['Team'], y=teams_desirable_positions['FT%'], name = "Desirable position",
                      marker = dict(color="rgba(152,0,0,0.5)")
                     )
 
@@ -310,10 +310,17 @@ worldbank_gdp['gdp_percentage'] = (worldbank_gdp['2010'] - worldbank_gdp['2009']
 ```
 
 ```python
+mycolorscale = [
+        [0, "blue"],
+        [(sum(worldbank_gdp["gdp_percentage"] < 0) / worldbank_gdp.shape[0]), "white"],
+        [1, "red"]
+    ]
+    
 data = [go.Choropleth(
     locations = worldbank_gdp['Country Code'],
     z = worldbank_gdp['gdp_percentage'].astype(float),
     autocolorscale = False,
+    colorscale = mycolorscale,
     marker = go.choropleth.Marker(
         line = go.choropleth.marker.Line(
             color = 'rgb(180,180,180)',
