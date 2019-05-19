@@ -15,6 +15,7 @@ from sklearn.decomposition import PCA
 
 # Data Visualization with plotly
 import plotly.graph_objs as go
+import plotly.figure_factory as ff
 
 
 
@@ -24,6 +25,9 @@ df = pd.read_csv('heart.csv')
 features = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
 # Get the correlation heatmap
 corr = df.drop(["target"], axis = 1).corr()
+heatmap_corr = np.array(corr.values)
+corr_text = np.around(heatmap_corr, decimals=2)
+heatmap_labels = list(corr.columns.values)
 # Separating out the data without label(target)
 x = df.loc[:, features].values
 # Separating out the label(target)
@@ -153,16 +157,6 @@ def cumulative_explained_variance_plot(eig_vals = eig_vals):
         yaxis=dict(
             title='Explained variance in percent'
         ),
-        # annotations=list([
-        #     dict(
-        #         x=1.16,
-        #         y=1.05,
-        #         xref='paper',
-        #         yref='paper',
-        #         text='Explained Variance',
-        #         showarrow=False,
-        #     )
-        # ])
     )
 
     figure = dict(data=data, layout=layout)
@@ -174,16 +168,12 @@ def corr_heatmap_plot():
 	# Returns:
 	# figure(graph_obj): plotly heatmap 
     
-    trace = go.Heatmap(z = corr, 
-                       x = df.drop(["target"], axis = 1).columns.values,
-                       y = df.drop(["target"], axis = 1).columns.values,
-                       hoverinfo="z")
-    data=[trace]
-    layout=dict(
-            title='Correlation matrix between initial variables'
-        )
-    figure = dict(data=data, layout=layout)
-    return figure
+	fig = ff.create_annotated_heatmap(heatmap_corr, x=heatmap_labels, y=heatmap_labels, annotation_text=corr_text, hoverinfo='z')
+
+	for i in range(len(fig.layout.annotations)):
+	    fig.layout.annotations[i].font.size = 8
+
+	return fig
 
 
 # Dash app declaration
@@ -206,64 +196,51 @@ app.layout = html.Div([
             'textAlign': 'center'
         }
     ),
-
-	# html.Div([
-	#     daq.ToggleSwitch(
-	#     	id='graph-switch',
-	#         # value=False,
-	# 	    label='Switch 2D or 3D',
-	# 	    labelPosition='bottom'
-	# 	)
-	# ], className = "row"),
 			
 	html.Div([
 			html.Div([dcc.Markdown('''
-				This dataset gives a number of variables along with a target condition of having 
-				or not having heart disease.
-				The features are the following:
+							This dataset gives a number of variables along with a target condition of having or not having heart disease.
 
-				age: The person's age in years
-				sex: The person's sex (1 = male, 0 = female)
-				cp: The chest pain experienced 
-					Value 1: typical angina, 
-					Value 2: atypical angina, 
-					Value 3: non-anginal pain, 
-					Value 4: asymptomatic
-				trestbps: The person's resting blood pressure ,mm Hg on admission to the hospital
-				chol: The person's cholesterol measurement in mg/dl
-				fbs: The person's fasting blood sugar (> 120 mg/dl, 1 = true; 0 = false)
-				restecg: Resting electrocardiographic measurement 
-					0 = normal, 
-					1 = having ST-T wave abnormality, 
-					2 = showing probable or definite left ventricular hypertrophy by Estes'
-				thalach: The person's maximum heart rate achieved
-				exang: Exercise induced angina (1 = yes; 0 = no)
-				oldpeak: ST depression induced by exercise relative to rest 
-				slope: the slope of the peak exercise ST segment 
-					Value 1: upsloping, 
-					Value 2: flat, 
-					Value 3: downsloping
-				ca: The number of major vessels (0-3)
-				thal: A blood disorder called thalassemia 
-					3 = normal,
-					6 = fixed defect
-					7 = reversable defect
-				target: Heart disease (0 = no, 1 = yes)
-				''')], className = "six columns"),
+							The features are the following:
+
+							age: The person's age in years
+							sex: The person's sex (1 = male, 0 = female)
+							cp: The chest pain experienced 
+								Value 1: typical angina, 
+								Value 2: atypical angina, 
+								Value 3: non-anginal pain, 
+								Value 4: asymptomatic
+							trestbps: The person's resting blood pressure ,mm Hg on admission to the hospital
+							chol: The person's cholesterol measurement in mg/dl
+							fbs: The person's fasting blood sugar (> 120 mg/dl, 1 = true; 0 = false)
+							restecg: Resting electrocardiographic measurement 
+								0 = normal, 
+								1 = having ST-T wave abnormality, 
+								2 = showing probable or definite left ventricular hypertrophy by Estes'
+							thalach: The person's maximum heart rate achieved
+							exang: Exercise induced angina (1 = yes; 0 = no)
+							oldpeak: ST depression induced by exercise relative to rest 
+							slope: the slope of the peak exercise ST segment 
+								Value 1: upsloping, 
+								Value 2: flat, 
+								Value 3: downsloping
+							ca: The number of major vessels (0-3)
+							thal: A blood disorder called thalassemia 
+								3 = normal,
+								6 = fixed defect
+								7 = reversable defect
+							target: Heart disease (0 = no, 1 = yes)
+				''')], className = "row"),
 
 			html.Div([dcc.Markdown('''
-				One of the tasks of this project is to find some liner correlation
-				between features.
-				We are going to find this corelation not only in initial features,
-				but also in principl components. So we will use PCA to find the new
-				components and find correlation between them. 
+							The task of this project is to use some techniques such as 
+							visualizing correlation and pca analysis to find some basic knowledge about dataset.
+							So first we will plot correlation heatmap to see linear correlation between features.
+							Then by using pca analysis, visualize dependency between 2 or 3 (depending on toggle switch ) principal components. 
 
+							''')], className = "row"),
 
-
-
-				''')], className = "six columns"),
-
-			html.Div([dcc.Graph(id='heatmap_plot_id', figure = heatmap_plot)], className = "five columns"),
+			html.Div([dcc.Graph(id='heatmap_plot_id', figure = heatmap_plot)], className = "row"),
 			html.Div([
 				    daq.ToggleSwitch(
 				    	id='graph-switch',
@@ -281,10 +258,28 @@ app.layout = html.Div([
 			        }, className = "ten columns"
 			    ),
 			html.Div([dcc.Markdown('''
-				Conclusion
-					aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-					aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-					aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+								According to above plotted graphs we can make some decisions about data set.
+							At first let's look at the correlation between the features.
+							Actually there is no perfect (strong) linear relationship between them but comparing with others,
+							some of them have in some sence good correlation , for example the following features have 
+							negative correlation lesser than -0.3 (as a threshold I chose -0.3)
+							"age" and "thalach": -0.4,
+							"exang" and "cp: -.39
+							"thalach" and "oldpeack": -0.34
+							"thalach" and "exang": -0.38
+
+							Also let;s notice that some of them have positive correlation greather than 0.3
+							"thalach" and "slope" have positive correlation: 0.39
+							"thalach" and "cp": 0.31
+
+							The rest of them have correlation lesser (in case of positive correlation) and greather (in case of negative correlation)
+							than +- 0.3.
+
+
+							And the second point that I would like to take into consideration is principal components visualization.
+							As the result of non perfect correlation between initial features, only first component has a significant explained variance which is 21.23 %,
+							all the other 12 components have from 11.8 to 2.8 explained variance. PCA helps us to notice that in some sense there is a 
+							possibility to cluster our data into 2 parts.
 
 				 ''')], className = "twenty columns"),
 		], className = "row")
