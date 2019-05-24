@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><graph edgedefault="directed"><node id="The Dark Knight"/>
+<node id="Inception"/>
+<node id="The Dark Knight Rises"/>
+<node id="The Shawshank Redemption"/>
+<node id="Fight Club"/>
+<node id="Forrest Gump"/>
+<node id="The Lord of the Rings: The Return of the King"/>
+<node id="Batman Begins"/>
+<node id="The Godfather"/>
+<node id="Pulp Fiction"/>
+<node id="The Godfather: Part II"/>
+<node id="Interstellar"/>
+<node id="The Lord of the Rings: The Fellowship of the Ring"/>
+<node id="The Matrix"/>
+<node id="Se7en"/>
+<node id="The Lord of the Rings: The Two Towers"/>
+<node id="Django Unchained"/>
+<node id="The Wolf of Wall Street"/>
+<node id="Inglourious Basterds"/>
+<node id="The Green Mile"/>
+<node id="Schindler's List"/>
+<node id="The Silence of the Lambs"/>
+<node id="Saving Private Ryan"/>
+<node id="Star Wars: Episode V - The Empire Strikes Back"/>
+<node id="Gladiator"/>
+<node id="Star Wars: Episode VI - Return of the Jedi"/>
+<node id="Goodfellas"/>
+<node id="The Prestige"/>
+<node id="Star Wars"/>
+<node id="The Usual Suspects"/>
+<node id="Shutter Island"/>
+<node id="Kill Bill: Vol. 1"/>
+<node id="Catch Me If You Can"/>
+<node id="The Revenant"/>
+<node id="The Departed"/>
+<node id="Reservoir Dogs"/>
+<node id="Kill Bill: Vol. 2"/>
+<node id="Léon"/>
+<node id="American History X"/>
+<node id="Star Wars: Episode III - Revenge of the Sith"/>
+<node id="Star Wars: Episode II - Attack of the Clones"/>
+<node id="Star Wars: Episode I - The Phantom Menace"/>
+<node id="Star Wars: Episode VII - The Force Awakens"/>
+<node id="Raiders of the Lost Ark"/>
+<node id="Rogue One"/>
+<node id="Star Wars: Episode VIII - The Last Jedi"/>
+<node id="Indiana Jones and the Last Crusade"/>
+<node id="One Flew Over the Cuckoo's Nest"/>
+<node id="Memento"/>
+<node id="Back to the Future"/>
+<edge source="The Dark Knight" target="Inception"/>
+<edge source="The Dark Knight" target="The Dark Knight Rises"/>
+<edge source="The Dark Knight" target="The Shawshank Redemption"/>
+<edge source="The Dark Knight" target="Fight Club"/>
+<edge source="The Dark Knight" target="Forrest Gump"/>
+<edge source="The Dark Knight" target="The Lord of the Rings: The Return of the King"/>
+<edge source="The Dark Knight" target="Batman Begins"/>
+<edge source="The Dark Knight" target="The Godfather"/>
+<edge source="The Dark Knight" target="Pulp Fiction"/>
+<edge source="The Dark Knight" target="The Godfather: Part II"/>
+<edge source="The Dark Knight" target="Interstellar"/>
+<edge source="The Dark Knight" target="The Lord of the Rings: The Fellowship of the Ring"/>
+<edge source="Inception" target="Fight Club"/>
+<edge source="Inception" target="The Dark Knight"/>
+<edge source="Inception" target="Forrest Gump"/>
+<edge source="Inception" target="Interstellar"/>
+<edge source="Inception" target="Pulp Fiction"/>
+<edge source="Inception" target="The Matrix"/>
+<edge source="Inception" target="Se7en"/>
+<edge source="Inception" target="The Lord of the Rings: The Return of the King"/>
+<edge source="Inception" target="The Lord of the Rings: The Fellowship of the Ring"/>
+<edge source="Inception" target="The Lord of the Rings: The Two Towers"/>
+<edge source="Inception" target="The Shawshank Redemption"/>
+<edge source="Inception" target="The Godfather"/>
+<edge source="The Dark Knight Rises" target="Batman Begins"/>
+<edge source="The Dark Knight Rises" target="The Dark Knight"/>
+<edge source="The Dark Knight Rises" target="Inception"/>
+<edge source="The Dark Knight Rises" target="Django Unchained"/>
+<edge source="The Dark Knight Rises" target="Interstellar"/>
+<edge source="The Dark Knight Rises" target="The Wolf of Wall Street"/>
+<edge source="The Dark Knight Rises" target="Inglourious Basterds"/>
+<edge source="The Dark Knight Rises" target="Fight Club"/>
+<edge source="The Dark Knight Rises" target="The Lord of the Rings: The Two Towers"/>
+<edge source="The Dark Knight Rises" target="The Lord of the Rings: The Fellowship of the Ring"/>
+<edge source="The Dark Knight Rises" target="The Lord of the Rings: The Return of the King"/>
+<edge source="The Dark Knight Rises" target="Forrest Gump"/>
+<edge source="The Shawshank Redemption" target="The Godfather"/>
+<edge source="The Shawshank Redemption" target="The Dark Knight"/>
+<edge source="The Shawshank Redemption" target="Forrest Gump"/>
+<edge source="The Shawshank Redemption" target="Fight Club"/>
+<edge source="The Shawshank Redemption" target="The Godfather: Part II"/>
+<edge source="The Shawshank Redemption" target="Inception"/>
+<edge source="The Shawshank Redemption" target="Pulp Fiction"/>
+<edge source="The Shawshank Redemption" target="Se7en"/>
+<edge source="The Shawshank Redemption" target="The Lord of the Rings: The Return of the King"/>
+<edge source="The Shawshank Redemption" target="The Green Mile"/>
+<edge source="The Shawshank Redemption" target="Schindler's List"/>
+<edge source="The Shawshank Redemption" target="The Silence of the Lambs"/>
+<edge source="Fight Club" target="Pulp Fiction"/>
+<edge source="Fight Club" target="Forrest Gump"/>
+<edge source="Fight Club" target="Inception"/>
+<edge source="Fight Club" target="Se7en"/>
+<edge source="Fight Club" target="The Dark Knight"/>
+<edge source="Fight Club" target="The Shawshank Redemption"/>
+<edge source="Fight Club" target="The Silence of the Lambs"/>
+<edge source="Fight Club" target="The Lord of the Rings: The Return of the King"/>
+<edge source="Fight Club" target="The Matrix"/>
+<edge source="Fight Club" target="The Godfather"/>
+<edge source="Fight Club" target="The Lord of the Rings: The Fellowship of the Ring"/>
+<edge source="Fight Club" target="The Green Mile"/>
+<edge source="Forrest Gump" target="Fight Club"/>
+<edge source="Forrest Gump" target="Inception"/>
+<edge source="Forrest Gump" target="Pulp Fiction"/>
+<edge source="Forrest Gump" target="Saving Private Ryan"/>
+<edge source="Forrest Gump" target="The Shawshank Redemption"/>
+<edge source="Forrest Gump" target="The Green Mile"/>
+<edge source="Forrest Gump" target="The Dark Knight"/>
+<edge source="Forrest Gump" target="The Lord of the Rings: The Return of the King"/>
+<edge source="Forrest Gump" target="Se7en"/>
+<edge source="Forrest Gump" target="The Silence of the Lambs"/>
+<edge source="Forrest Gump" target="The Lord of the Rings: The Fellowship of the Ring"/>
+<edge source="Forrest Gump" target="The Lord of the Rings: The Two Towers"/>
+<edge source="The Lord of the Rings: The Return of the King" target="The Lord of the Rings: The Two Towers"/>
+<edge source="The Lord of the Rings: The Return of the King" target="The Lord of the Rings: The Fellowship of the Ring"/>
+<edge source="The Lord of the Rings: The Return of the King" target="The Dark Knight"/>
+<edge source="The Lord of the Rings: The Return of the King" target="Forrest Gump"/>
+<edge source="The Lord of the Rings: The Return of the King" target="Inception"/>
+<edge source="The Lord of the Rings: The Return of the King" target="Star Wars: Episode V - The Empire Strikes Back"/>
+<edge source="The Lord of the Rings: The Return of the King" target="Fight Club"/>
+<edge source="The Lord of the Rings: The Return of the King" target="The Matrix"/>
+<edge source="The Lord of the Rings: The Return of the King" target="Pulp Fiction"/>
+<edge source="The Lord of the Rings: The Return of the King" target="Schindler's List"/>
+<edge source="The Lord of the Rings: The Return of the King" target="The Godfather"/>
+<edge source="The Lord of the Rings: The Return of the King" target="Gladiator"/>
+<edge source="Batman Begins" target="The Dark Knight Rises"/>
+<edge source="Batman Begins" target="The Dark Knight"/>
+<edge source="Batman Begins" target="Inception"/>
+<edge source="Batman Begins" target="The Wolf of Wall Street"/>
+<edge source="Batman Begins" target="Star Wars: Episode VI - Return of the Jedi"/>
+<edge source="Batman Begins" target="Interstellar"/>
+<edge source="Batman Begins" target="Inglourious Basterds"/>
+<edge source="Batman Begins" target="Django Unchained"/>
+<edge source="Batman Begins" target="The Lord of the Rings: The Return of the King"/>
+<edge source="Batman Begins" target="The Lord of the Rings: The Fellowship of the Ring"/>
+<edge source="Batman Begins" target="The Lord of the Rings: The Two Towers"/>
+<edge source="Batman Begins" target="Gladiator"/>
+<edge source="The Godfather" target="The Godfather: Part II"/>
+<edge source="The Godfather" target="The Shawshank Redemption"/>
+<edge source="The Godfather" target="The Dark Knight"/>
+<edge source="The Godfather" target="Pulp Fiction"/>
+<edge source="The Godfather" target="Forrest Gump"/>
+<edge source="The Godfather" target="Fight Club"/>
+<edge source="The Godfather" target="Schindler's List"/>
+<edge source="The Godfather" target="Inception"/>
+<edge source="The Godfather" target="The Lord of the Rings: The Return of the King"/>
+<edge source="The Godfather" target="Goodfellas"/>
+<edge source="The Godfather" target="Se7en"/>
+<edge source="The Godfather" target="The Silence of the Lambs"/>
+<edge source="Pulp Fiction" target="Fight Club"/>
+<edge source="Pulp Fiction" target="Forrest Gump"/>
+<edge source="Pulp Fiction" target="Inception"/>
+<edge source="Pulp Fiction" target="Se7en"/>
+<edge source="Pulp Fiction" target="The Godfather"/>
+<edge source="Pulp Fiction" target="The Shawshank Redemption"/>
+<edge source="Pulp Fiction" target="The Dark Knight"/>
+<edge source="Pulp Fiction" target="The Silence of the Lambs"/>
+<edge source="Pulp Fiction" target="Saving Private Ryan"/>
+<edge source="Pulp Fiction" target="The Lord of the Rings: The Return of the King"/>
+<edge source="Pulp Fiction" target="The Green Mile"/>
+<edge source="Pulp Fiction" target="Schindler's List"/>
+<edge source="The Godfather: Part II" target="The Godfather"/>
+<edge source="The Godfather: Part II" target="The Shawshank Redemption"/>
+<edge source="The Godfather: Part II" target="The Dark Knight"/>
+<edge source="The Godfather: Part II" target="Schindler's List"/>
+<edge source="The Godfather: Part II" target="Fight Club"/>
+<edge source="The Godfather: Part II" target="Pulp Fiction"/>
+<edge source="The Godfather: Part II" target="Forrest Gump"/>
+<edge source="The Godfather: Part II" target="The Lord of the Rings: The Return of the King"/>
+<edge source="The Godfather: Part II" target="Goodfellas"/>
+<edge source="The Godfather: Part II" target="Inception"/>
+<edge source="The Godfather: Part II" target="The Silence of the Lambs"/>
+<edge source="The Godfather: Part II" target="Se7en"/>
+<edge source="Interstellar" target="Inception"/>
+<edge source="Interstellar" target="The Dark Knight"/>
+<edge source="Interstellar" target="Forrest Gump"/>
+<edge source="Interstellar" target="Fight Club"/>
+<edge source="Interstellar" target="Se7en"/>
+<edge source="Interstellar" target="Saving Private Ryan"/>
+<edge source="Interstellar" target="The Prestige"/>
+<edge source="Interstellar" target="The Matrix"/>
+<edge source="Interstellar" target="Pulp Fiction"/>
+<edge source="Interstellar" target="The Green Mile"/>
+<edge source="Interstellar" target="The Shawshank Redemption"/>
+<edge source="Interstellar" target="The Lord of the Rings: The Return of the King"/>
+<edge source="The Lord of the Rings: The Fellowship of the Ring" target="The Lord of the Rings: The Two Towers"/>
+<edge source="The Lord of the Rings: The Fellowship of the Ring" target="The Lord of the Rings: The Return of the King"/>
+<edge source="The Lord of the Rings: The Fellowship of the Ring" target="Forrest Gump"/>
+<edge source="The Lord of the Rings: The Fellowship of the Ring" target="Inception"/>
+<edge source="The Lord of the Rings: The Fellowship of the Ring" target="The Matrix"/>
+<edge source="The Lord of the Rings: The Fellowship of the Ring" target="Star Wars: Episode V - The Empire Strikes Back"/>
+<edge source="The Lord of the Rings: The Fellowship of the Ring" target="Fight Club"/>
+<edge source="The Lord of the Rings: The Fellowship of the Ring" target="The Dark Knight"/>
+<edge source="The Lord of the Rings: The Fellowship of the Ring" target="Gladiator"/>
+<edge source="The Lord of the Rings: The Fellowship of the Ring" target="Saving Private Ryan"/>
+<edge source="The Lord of the Rings: The Fellowship of the Ring" target="Star Wars"/>
+<edge source="The Lord of the Rings: The Fellowship of the Ring" target="Pulp Fiction"/>
+<edge source="The Matrix" target="Inception"/>
+<edge source="The Matrix" target="Forrest Gump"/>
+<edge source="The Matrix" target="The Lord of the Rings: The Fellowship of the Ring"/>
+<edge source="The Matrix" target="Fight Club"/>
+<edge source="The Matrix" target="The Lord of the Rings: The Two Towers"/>
+<edge source="The Matrix" target="The Lord of the Rings: The Return of the King"/>
+<edge source="The Matrix" target="Pulp Fiction"/>
+<edge source="The Matrix" target="Saving Private Ryan"/>
+<edge source="The Matrix" target="The Dark Knight"/>
+<edge source="The Matrix" target="Se7en"/>
+<edge source="The Matrix" target="The Silence of the Lambs"/>
+<edge source="The Matrix" target="Gladiator"/>
+<edge source="Se7en" target="Fight Club"/>
+<edge source="Se7en" target="The Silence of the Lambs"/>
+<edge source="Se7en" target="Forrest Gump"/>
+<edge source="Se7en" target="Pulp Fiction"/>
+<edge source="Se7en" target="Inception"/>
+<edge source="Se7en" target="The Green Mile"/>
+<edge source="Se7en" target="Saving Private Ryan"/>
+<edge source="Se7en" target="Gladiator"/>
+<edge source="Se7en" target="The Matrix"/>
+<edge source="Se7en" target="The Shawshank Redemption"/>
+<edge source="Se7en" target="The Usual Suspects"/>
+<edge source="Se7en" target="Interstellar"/>
+<edge source="The Lord of the Rings: The Two Towers" target="The Lord of the Rings: The Fellowship of the Ring"/>
+<edge source="The Lord of the Rings: The Two Towers" target="The Lord of the Rings: The Return of the King"/>
+<edge source="The Lord of the Rings: The Two Towers" target="Inception"/>
+<edge source="The Lord of the Rings: The Two Towers" target="Star Wars: Episode V - The Empire Strikes Back"/>
+<edge source="The Lord of the Rings: The Two Towers" target="Forrest Gump"/>
+<edge source="The Lord of the Rings: The Two Towers" target="The Matrix"/>
+<edge source="The Lord of the Rings: The Two Towers" target="Saving Private Ryan"/>
+<edge source="The Lord of the Rings: The Two Towers" target="The Dark Knight"/>
+<edge source="The Lord of the Rings: The Two Towers" target="Fight Club"/>
+<edge source="The Lord of the Rings: The Two Towers" target="Star Wars"/>
+<edge source="The Lord of the Rings: The Two Towers" target="Gladiator"/>
+<edge source="The Lord of the Rings: The Two Towers" target="Pulp Fiction"/>
+<edge source="Django Unchained" target="Inglourious Basterds"/>
+<edge source="Django Unchained" target="The Wolf of Wall Street"/>
+<edge source="Django Unchained" target="Pulp Fiction"/>
+<edge source="Django Unchained" target="The Dark Knight Rises"/>
+<edge source="Django Unchained" target="Shutter Island"/>
+<edge source="Django Unchained" target="Fight Club"/>
+<edge source="Django Unchained" target="Forrest Gump"/>
+<edge source="Django Unchained" target="Kill Bill: Vol. 1"/>
+<edge source="Django Unchained" target="Inception"/>
+<edge source="Django Unchained" target="Se7en"/>
+<edge source="Django Unchained" target="Interstellar"/>
+<edge source="Django Unchained" target="Gladiator"/>
+<edge source="The Wolf of Wall Street" target="Django Unchained"/>
+<edge source="The Wolf of Wall Street" target="Shutter Island"/>
+<edge source="The Wolf of Wall Street" target="Inglourious Basterds"/>
+<edge source="The Wolf of Wall Street" target="Catch Me If You Can"/>
+<edge source="The Wolf of Wall Street" target="Fight Club"/>
+<edge source="The Wolf of Wall Street" target="Inception"/>
+<edge source="The Wolf of Wall Street" target="Forrest Gump"/>
+<edge source="The Wolf of Wall Street" target="The Dark Knight Rises"/>
+<edge source="The Wolf of Wall Street" target="Interstellar"/>
+<edge source="The Wolf of Wall Street" target="The Revenant"/>
+<edge source="The Wolf of Wall Street" target="Batman Begins"/>
+<edge source="The Wolf of Wall Street" target="The Departed"/>
+<edge source="Inglourious Basterds" target="Django Unchained"/>
+<edge source="Inglourious Basterds" target="The Wolf of Wall Street"/>
+<edge source="Inglourious Basterds" target="Kill Bill: Vol. 1"/>
+<edge source="Inglourious Basterds" target="Pulp Fiction"/>
+<edge source="Inglourious Basterds" target="Reservoir Dogs"/>
+<edge source="Inglourious Basterds" target="Shutter Island"/>
+<edge source="Inglourious Basterds" target="The Dark Knight Rises"/>
+<edge source="Inglourious Basterds" target="Fight Club"/>
+<edge source="Inglourious Basterds" target="Kill Bill: Vol. 2"/>
+<edge source="Inglourious Basterds" target="Se7en"/>
+<edge source="Inglourious Basterds" target="Batman Begins"/>
+<edge source="Inglourious Basterds" target="Forrest Gump"/>
+<edge source="The Green Mile" target="Saving Private Ryan"/>
+<edge source="The Green Mile" target="Forrest Gump"/>
+<edge source="The Green Mile" target="The Silence of the Lambs"/>
+<edge source="The Green Mile" target="Gladiator"/>
+<edge source="The Green Mile" target="Se7en"/>
+<edge source="The Green Mile" target="Fight Club"/>
+<edge source="The Green Mile" target="Pulp Fiction"/>
+<edge source="The Green Mile" target="Inception"/>
+<edge source="The Green Mile" target="The Shawshank Redemption"/>
+<edge source="The Green Mile" target="Léon"/>
+<edge source="The Green Mile" target="American History X"/>
+<edge source="The Green Mile" target="Schindler's List"/>
+<edge source="Schindler's List" target="Forrest Gump"/>
+<edge source="Schindler's List" target="The Godfather: Part II"/>
+<edge source="Schindler's List" target="The Godfather"/>
+<edge source="Schindler's List" target="Pulp Fiction"/>
+<edge source="Schindler's List" target="The Lord of the Rings: The Return of the King"/>
+<edge source="Schindler's List" target="Saving Private Ryan"/>
+<edge source="Schindler's List" target="The Shawshank Redemption"/>
+<edge source="Schindler's List" target="Fight Club"/>
+<edge source="Schindler's List" target="The Silence of the Lambs"/>
+<edge source="Schindler's List" target="The Green Mile"/>
+<edge source="Schindler's List" target="Gladiator"/>
+<edge source="Schindler's List" target="Inception"/>
+<edge source="The Silence of the Lambs" target="Se7en"/>
+<edge source="The Silence of the Lambs" target="Forrest Gump"/>
+<edge source="The Silence of the Lambs" target="The Green Mile"/>
+<edge source="The Silence of the Lambs" target="Fight Club"/>
+<edge source="The Silence of the Lambs" target="Pulp Fiction"/>
+<edge source="The Silence of the Lambs" target="Saving Private Ryan"/>
+<edge source="The Silence of the Lambs" target="The Matrix"/>
+<edge source="The Silence of the Lambs" target="Gladiator"/>
+<edge source="The Silence of the Lambs" target="Inception"/>
+<edge source="The Silence of the Lambs" target="The Usual Suspects"/>
+<edge source="The Silence of the Lambs" target="Schindler's List"/>
+<edge source="The Silence of the Lambs" target="Goodfellas"/>
+<edge source="Saving Private Ryan" target="The Green Mile"/>
+<edge source="Saving Private Ryan" target="Forrest Gump"/>
+<edge source="Saving Private Ryan" target="Gladiator"/>
+<edge source="Saving Private Ryan" target="Fight Club"/>
+<edge source="Saving Private Ryan" target="The Silence of the Lambs"/>
+<edge source="Saving Private Ryan" target="Pulp Fiction"/>
+<edge source="Saving Private Ryan" target="Se7en"/>
+<edge source="Saving Private Ryan" target="The Matrix"/>
+<edge source="Saving Private Ryan" target="The Lord of the Rings: The Two Towers"/>
+<edge source="Saving Private Ryan" target="Inception"/>
+<edge source="Saving Private Ryan" target="The Lord of the Rings: The Return of the King"/>
+<edge source="Saving Private Ryan" target="The Lord of the Rings: The Fellowship of the Ring"/>
+<edge source="Star Wars: Episode V - The Empire Strikes Back" target="Star Wars"/>
+<edge source="Star Wars: Episode V - The Empire Strikes Back" target="Star Wars: Episode VI - Return of the Jedi"/>
+<edge source="Star Wars: Episode V - The Empire Strikes Back" target="Star Wars: Episode III - Revenge of the Sith"/>
+<edge source="Star Wars: Episode V - The Empire Strikes Back" target="Star Wars: Episode II - Attack of the Clones"/>
+<edge source="Star Wars: Episode V - The Empire Strikes Back" target="Star Wars: Episode I - The Phantom Menace"/>
+<edge source="Star Wars: Episode V - The Empire Strikes Back" target="The Lord of the Rings: The Return of the King"/>
+<edge source="Star Wars: Episode V - The Empire Strikes Back" target="The Lord of the Rings: The Two Towers"/>
+<edge source="Star Wars: Episode V - The Empire Strikes Back" target="The Lord of the Rings: The Fellowship of the Ring"/>
+<edge source="Star Wars: Episode V - The Empire Strikes Back" target="Star Wars: Episode VII - The Force Awakens"/>
+<edge source="Star Wars: Episode V - The Empire Strikes Back" target="Raiders of the Lost Ark"/>
+<edge source="Star Wars: Episode V - The Empire Strikes Back" target="Rogue One"/>
+<edge source="Star Wars: Episode V - The Empire Strikes Back" target="Forrest Gump"/>
+<edge source="Gladiator" target="Saving Private Ryan"/>
+<edge source="Gladiator" target="The Green Mile"/>
+<edge source="Gladiator" target="Forrest Gump"/>
+<edge source="Gladiator" target="Se7en"/>
+<edge source="Gladiator" target="The Lord of the Rings: The Return of the King"/>
+<edge source="Gladiator" target="The Silence of the Lambs"/>
+<edge source="Gladiator" target="The Matrix"/>
+<edge source="Gladiator" target="The Lord of the Rings: The Two Towers"/>
+<edge source="Gladiator" target="The Lord of the Rings: The Fellowship of the Ring"/>
+<edge source="Gladiator" target="Inception"/>
+<edge source="Gladiator" target="Fight Club"/>
+<edge source="Gladiator" target="The Departed"/>
+<edge source="Star Wars: Episode VI - Return of the Jedi" target="Star Wars: Episode V - The Empire Strikes Back"/>
+<edge source="Star Wars: Episode VI - Return of the Jedi" target="Star Wars"/>
+<edge source="Star Wars: Episode VI - Return of the Jedi" target="Star Wars: Episode III - Revenge of the Sith"/>
+<edge source="Star Wars: Episode VI - Return of the Jedi" target="Star Wars: Episode I - The Phantom Menace"/>
+<edge source="Star Wars: Episode VI - Return of the Jedi" target="Star Wars: Episode II - Attack of the Clones"/>
+<edge source="Star Wars: Episode VI - Return of the Jedi" target="Star Wars: Episode VII - The Force Awakens"/>
+<edge source="Star Wars: Episode VI - Return of the Jedi" target="Rogue One"/>
+<edge source="Star Wars: Episode VI - Return of the Jedi" target="Star Wars: Episode VIII - The Last Jedi"/>
+<edge source="Star Wars: Episode VI - Return of the Jedi" target="Indiana Jones and the Last Crusade"/>
+<edge source="Star Wars: Episode VI - Return of the Jedi" target="Raiders of the Lost Ark"/>
+<edge source="Star Wars: Episode VI - Return of the Jedi" target="Batman Begins"/>
+<edge source="Star Wars: Episode VI - Return of the Jedi" target="The Dark Knight Rises"/>
+<edge source="Goodfellas" target="The Godfather: Part II"/>
+<edge source="Goodfellas" target="Pulp Fiction"/>
+<edge source="Goodfellas" target="The Godfather"/>
+<edge source="Goodfellas" target="Se7en"/>
+<edge source="Goodfellas" target="Forrest Gump"/>
+<edge source="Goodfellas" target="The Silence of the Lambs"/>
+<edge source="Goodfellas" target="Fight Club"/>
+<edge source="Goodfellas" target="Saving Private Ryan"/>
+<edge source="Goodfellas" target="The Usual Suspects"/>
+<edge source="Goodfellas" target="The Departed"/>
+<edge source="Goodfellas" target="One Flew Over the Cuckoo's Nest"/>
+<edge source="Goodfellas" target="The Green Mile"/>
+<edge source="The Prestige" target="Inception"/>
+<edge source="The Prestige" target="Interstellar"/>
+<edge source="The Prestige" target="The Departed"/>
+<edge source="The Prestige" target="Gladiator"/>
+<edge source="The Prestige" target="Fight Club"/>
+<edge source="The Prestige" target="Se7en"/>
+<edge source="The Prestige" target="The Dark Knight"/>
+<edge source="The Prestige" target="Forrest Gump"/>
+<edge source="The Prestige" target="Memento"/>
+<edge source="The Prestige" target="Saving Private Ryan"/>
+<edge source="The Prestige" target="The Green Mile"/>
+<edge source="The Prestige" target="The Usual Suspects"/>
+<edge source="Star Wars" target="Star Wars: Episode V - The Empire Strikes Back"/>
+<edge source="Star Wars" target="Star Wars: Episode VI - Return of the Jedi"/>
+<edge source="Star Wars" target="Star Wars: Episode III - Revenge of the Sith"/>
+<edge source="Star Wars" target="Star Wars: Episode I - The Phantom Menace"/>
+<edge source="Star Wars" target="Star Wars: Episode VII - The Force Awakens"/>
+<edge source="Star Wars" target="Star Wars: Episode II - Attack of the Clones"/>
+<edge source="Star Wars" target="Raiders of the Lost Ark"/>
+<edge source="Star Wars" target="The Lord of the Rings: The Two Towers"/>
+<edge source="Star Wars" target="Rogue One"/>
+<edge source="Star Wars" target="Back to the Future"/>
+<edge source="Star Wars" target="The Lord of the Rings: The Fellowship of the Ring"/>
+<edge source="Star Wars" target="The Lord of the Rings: The Return of the King"/>
+</graph></graphml>
