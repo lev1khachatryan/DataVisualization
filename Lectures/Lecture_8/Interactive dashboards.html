@@ -1,0 +1,287 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Data Visualization</title>
+		<meta name="author" content="Hrant Davtyan">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/theme/simple.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/monokai-sublime.css">
+		
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+
+<!-- Slide 1 -->
+<section data-markdown>
+## Data Visualization
+<h3>Interactive dashboards</h3>
+</section>
+
+
+<!-- Slide 2 -->
+<section data-markdown>
+##Content
+--------------------------
+- Basic dash callbacks
+- Callbacks with State
+- Graphs with callbacks
+- Deployment
+</section>
+
+
+
+
+<!-- Slide 3 -->
+<section data-markdown>
+## Basic callback
+--------------------------
+<pre class="python"><code>
+```
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output
+
+app = dash.Dash()
+
+app.layout = html.Div([
+    dcc.Input(id='text_in', value='Name Surname', type='text'),
+    dcc.Dropdown(
+    	id = 'option_in',
+        options=[
+            {'label': 'Facebook', 'value': 'www.fb.com'},
+            {'label': 'Twitter', 'value': 'www.twitter.com'},
+            {'label': 'AUA', 'value': 'www.aua.am'}
+        ],
+        value='www.fb.com'),
+    html.Div(id='text_out')
+])
+
+
+@app.callback(
+    Output(component_id='text_out', component_property='children'),
+    [Input(component_id='text_in', component_property='value'),
+     Input(component_id='option_in', component_property='value')]
+)
+def update_text_output(input_value_1,input_value_2):
+    return input_value_1 + ", please follow me on " + input_value_2
+
+
+if __name__ == '__main__':
+    app.run_server()
+```
+</code></pre>
+</section>
+
+
+<!-- Slide 4 -->
+<section data-markdown>
+## Callback with State
+--------------------------
+<pre class="python"><code>
+```
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output, State
+
+app = dash.Dash()
+
+app.layout = html.Div([
+    dcc.Input(id='text_in', value='Name Surname', type='text'),
+    dcc.Dropdown(
+    	id = 'option_in',
+        options=[
+            {'label': 'Facebook', 'value': 'www.fb.com'},
+            {'label': 'Twitter', 'value': 'www.twitter.com'},
+            {'label': 'AUA', 'value': 'www.aua.am'}
+        ],
+        value='www.fb.com'),
+    html.Button(id='submit',n_clicks=0, children='Submit')
+    html.Div(id='text_out')
+])
+
+
+@app.callback(
+    Output(component_id='text_out', component_property='children'),
+    [Input(component_id='submit', component_property='n_clicks')],
+    [State(component_id='text_in', component_property='value'),
+     State(component_id='option_in', component_property='value')]
+)
+def update_text_output(clicks,input_value_1,input_value_2):
+    return input_value_1 + ", please follow me on " + input_value_2
+
+
+if __name__ == '__main__':
+    app.run_server()
+```
+</code></pre>
+</section>
+
+
+<!-- Slide 5 -->
+<section data-markdown>
+## Graph with callback
+--------------------------
+<pre class="python"><code>
+```
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output
+
+import plotly.graph_objs as go
+import quandl
+
+app = dash.Dash()
+
+app.layout = html.Div([
+    dcc.Dropdown(
+    	id = 'option_in',
+        options=[
+            {'label': 'Google', 'value': 'GOOGL'},
+            {'label': 'Apple', 'value': 'AAPL'},
+            {'label': 'Microsoft', 'value': 'MSFT'}
+        ],
+        value='GOOGL'),
+    dcc.Graph(id='figure_1')
+])
+
+
+@app.callback(
+    Output(component_id='figure_1', component_property='figure'),
+    [Input(component_id='option_in', component_property='value')]
+)
+def update_graph(input_value):
+	quandl_input = "WIKI/"+input_value
+	stock_data = quandl.get(quandl_input, authtoken = "mytoken")
+	x_values = stock_data.index
+	y_values = stock_data.Open
+	trace = go.Scatter(x=x_values,y=y_values,mode='lines')
+	data = [trace]
+	figure = dict(data=data)
+    return figure
+
+
+if __name__ == '__main__':
+    app.run_server()
+```
+</code></pre>
+</section>
+
+<!-- Slide 6 -->
+<section data-markdown>
+## Deployment
+-----------------------
+- Open free account on [PythonAnywhere](www.pythonanywhere.com)
+- Use a reasonable username
+- Upload your codes
+    1. Click **Browse files**
+    2. Click on **Upload a file**
+    3. Choose your Dash files
+</section>
+
+
+<!-- Slide 7 -->
+<section data-markdown>
+## Deployment (cont'd)
+-----------------------
+- Open a new console (Bash)
+- Set up the virtual environment
+    1. `mkvirtualenv SomeName` to create it
+    2. `pip install package1 package2` to install libraries
+</section>
+
+
+<!-- Slide 8 -->
+<section data-markdown>
+## Deployment (cont'd)
+-----------------------
+- Go to Web tab and set it up
+    1. provide path of the main Dash file to **Source code**
+        - usually `/home/USERNAME/APP.py`
+    2. provide path of the virual environment to **Virtualenv**
+        - usually `/home/USERNAME/.virtualenvs/NAME`
+    3. click on **WSGI configuration file** and edit
+        - import sys
+        - sys.path.append('/home/USERNAME')
+        - from APP import server as application
+</section>
+
+
+<!-- Slide 9 -->
+<section data-markdown>
+## Deployment (cont'd)
+-----------------------
+- Reload the app
+- Go to **USERNAME.pythonanywhere.com**
+</section>
+
+
+<!-- Slide 10 -->
+<section>
+	<blockquote>Thank You</blockquote>
+</section>
+	      </div>
+    </div>
+
+	<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script>
+
+    <script>
+     // Full list of configuration options available at:
+     // https://github.com/hakimel/reveal.js#configuration
+     Reveal.initialize({
+       slideNumber:true,
+       controls: true,
+       progress: true,
+       history: true,
+       center: true,
+       transitionSpeed:'slow',
+       previewLinks:true,
+       transition: 'convex', // none/fade/slide/convex/concave/zoom
+       // Optional reveal.js plugins
+       dependencies: [
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js',
+	   condition: function() { return !document.body.classList; } },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js',
+	   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js',
+	   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js',
+	   async: true,
+	   condition: function() { return !!document.querySelector( 'pre code' ); },
+	   callback: function() { hljs.initHighlightingOnLoad(); } },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true }
+       ]
+     });
+    </script>
+	</body>
+</html>
