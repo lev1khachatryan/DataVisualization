@@ -1,0 +1,21 @@
+.statistics_main_container {
+	backgroundColor: #0f2331,
+            display: flex,
+            justify-content: space-around,
+            width: 100%,
+            heigth: 100vh,
+            flex-flow: row wrap
+}
+
+.statistics_container {
+	width: 30%;
+}
+
+.aabb {
+width: 1000px;
+}
+
+.svg-container {
+width: 200px;
+height: 250px;
+}
